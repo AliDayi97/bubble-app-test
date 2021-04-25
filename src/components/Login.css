@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+}
+.email-field {
+  margin: 1rem;
+}
+.password-field {
+  margin: 1rem;
+}
+
+.error-field {
+  margin: 1rem;
+}

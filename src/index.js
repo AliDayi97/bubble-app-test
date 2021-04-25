@@ -1,14 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./fonts/Quicksand-Regular.ttf";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "semantic-ui-css/semantic.min.css";
+import { UserProvider } from "./contexts/UserContext";
+import { UiProvider } from "./contexts/UiContext";
+import { BookingProvider } from "./contexts/BookingContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UiProvider>
+      <UserProvider>
+        <BookingProvider>
+          <App />
+        </BookingProvider>
+      </UserProvider>
+    </UiProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
